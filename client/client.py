@@ -20,9 +20,9 @@ import os
 import grpc
 
 # Error: External module import path is not yet working...
-import bazel_demo_schema.protos.protos.routeguide_pb2
-import bazel_demo_schema.protos.protos.routeguide_pb2_grpc
-import bazel_demo_schema.protos.protos.resources
+import bazel_demo_schema.protos.routeguide_pb2
+import bazel_demo_schema.protos.routeguide_pb2_grpc
+import bazel_demo_schema.common.resources
 
 def make_route_note(message, latitude, longitude):
     return routeguide_pb2.RouteNote(
