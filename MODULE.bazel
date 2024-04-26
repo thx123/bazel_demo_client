@@ -1,0 +1,13 @@
+module(name = "bazel-demo-server", version = "0.0.1")
+
+# Official Bazel modules
+bazel_dep(name = "rules_proto_grpc_python", version = "5.0.0-alpha2")
+bazel_dep(name = "rules_python", version = "0.28.0")
+
+# Own modules
+bazel_dep(name = "bazel_demo_schema", version = "0.0.1")
+git_override(
+    module_name = "bazel_demo_schema",
+    commit = "c82c0b550371e8bf6ae23e1c467677445292af4e",
+    remote = "https://github.com/thx123/bazel_demo_schema.git",
+)

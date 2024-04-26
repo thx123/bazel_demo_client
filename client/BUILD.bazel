@@ -1,0 +1,15 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+
+py_binary(
+    name = "client",
+    srcs = [
+        "client.py",
+    ],
+    data = ["@bazel_demo_schema//data:routeguide_features"],
+    imports = ["."],
+    python_version = "PY3",
+    deps = [
+        "@bazel_demo_schema//common:resources",
+        "@bazel_demo_schema//protos:routeguide_py_grpc",
+    ],
+)
